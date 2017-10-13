@@ -1,0 +1,39 @@
+from pprint import pprint
+
+students = []   # declare empty students list to contain student dictionaries
+
+# create a dictionary to contain individual student data according to the data template
+student1 = {'id':12345, 'first_name':'John', 'last_name':'Lennon', 'assignments':[('assignment_1',0),('assignment_2',2),('assignment_3',3)]}
+student2 = {'id':12346, 'first_name':'Paul', 'last_name':'McCartney', 'assignments':[('assignment_1',2),('assignment_2',3),('assignment_3',2)]}
+student3 = {'id':12347, 'first_name':'Ringo', 'last_name':'Starr', 'assignments':[('assignment_1',2),('assignment_2',1),('assignment_3',1)]}
+
+# add multiple elements to list with extend rather than one-by-one with append
+students.extend((student1, student2, student3))
+
+# task - print each element inside each student's dictionary
+for index, s in enumerate(students):
+    print("*** Student Number " + str(index + 1))
+
+    # access and print the entire student dictionary, s
+    pprint(s)
+
+    # access and print the simple values with their keys
+    print(s['id'])
+    print(s['first_name'])
+    print(s['last_name'])
+
+    # access and print all of the student's assignments
+    print(s['assignments'])
+
+    # print assignments individually
+    numOfAssignments = len(s["assignments"])  # get length of assignments list of tuples to set range
+    for tupleIndex in range(0, numOfAssignments):
+        print(s['assignments'][tupleIndex])
+        # lastly, access and print the elements of the tuple individually
+        print(s['assignments'][tupleIndex][0])  # this is the assignment name
+        print(s['assignments'][tupleIndex][1])  # this is the assignment grade
+
+    print("\n") # add a blank line between students for better viewing
+
+# use pprint to view complex data structures like dictionaries or lists - seriously useful for troubleshooting
+pprint(students)
