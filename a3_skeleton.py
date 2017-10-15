@@ -26,7 +26,7 @@ student6 = {'id':12350, 'first_name':'Tom', 'last_name':'Petty', 'assignments':[
 
 # add multiple elements to list with extend
 students.extend((student5, student2, student3, student4, student1))     # students added out of order then sorted for testing
-students.sort(key=itemgetter("id"))
+students.sort(key=itemgetter("id"))                                     # sort by id first off to make second sort easier
 
 
 #This should return the average grade of all assignments from all students
