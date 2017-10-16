@@ -87,7 +87,7 @@ def highest_n_grades(students, assignment_name, n):
 
     return listOfHighest[:n]                                # return appropriate slice of list
 
-returnedList = highest_n_grades(students, "assignment_2", 2)
+returnedList = highest_n_grades(students, "assignment_2", 3)
 print("Called function returnedList *************************************************")
 print("The returned List of Highest Grades for this assigment is: ")
 pprint(returnedList)
@@ -174,10 +174,6 @@ def passing_student_ids(students):
         for num in range(0, numOfAssignments):
             grades.append(s["assignments"][num][1]) # get the second element of the tuple and append grades list
 
-        print(s["first_name"])
-        print(sum(grades))
-        print(len(grades))
-        print(sum(grades) / len(grades))
         if (sum(grades) / len(grades) >= 2.0):
             passingStudents.append(s["id"])
 
