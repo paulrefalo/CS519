@@ -26,7 +26,7 @@ def valid_html(test_string):
             result.append((s, False))
             continue
 
-        print(tags)
+        #print(tags)
         restart = True
 
         while restart:              # use while loop to restart and re-index for loop since we are removing elements conditionally
@@ -41,7 +41,7 @@ def valid_html(test_string):
                     if mo2:                                         # if so, remove this closing and opening tag and restart for loop
                         tags.remove(tags[idx])
                         tags.remove(tags[idx - 1])
-                        print(tags)
+                        #print(tags)
                         break                                       # break needed to restart for loop
                     else:                                           # if not, HTML is not valid, return False and string
                         result.append((s, False))                   # append False to result
