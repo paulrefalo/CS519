@@ -53,3 +53,15 @@ def valid_html(test_string):
 validHTML = valid_html(example_set)
 print("The result of HTML submitted for validity is: ")
 pprint(validHTML)
+
+'''
+Example Output
+The result of HTML submitted for validity is: 
+[('<a><b><c></c></b></a>', True),
+ ('<foo>asd<bar>alksjd</bar><p>asldkj</p></foo>', True),
+ ('<foo><bar></bop></bar></foo>', False),
+ ('<foo><bar></bar></foo></foo>', False),
+ ('<foo><bar></bar></foo></foo><p>', False),
+ ('<scooby><a><b><c></c></b></a></doo>', False),
+ ('<scooby><a><b><c></c></b></a></scooby>', True)]
+'''
