@@ -3,6 +3,7 @@
 
 from classroom import Students
 from classroom import Assignments
+from pprint import pprint
 
 
 # It should create two students "Allen Allenson" and "Becky Beckyson" with ids of 123 and 456.
@@ -71,3 +72,5 @@ s2.remove_assignment("Assignment 2")
 print("\n============= Get Becky's average grade again ===================")
 print(s2.get_full_name() + "'s average on all graded assignments so far is " + str(s2.average()))
 
+pprint(dir(s1))
+print("Done")

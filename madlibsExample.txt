@@ -1,0 +1,2 @@
+The [animal] looked at the [object] and decided to [verb].
+
