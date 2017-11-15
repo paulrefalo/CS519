@@ -1,0 +1,38 @@
+{
+	"simpsons":[
+		{"Homer":{
+			"age":40,
+			"job":"Nuclear Engineer",
+			"hair":"scarce"
+			}
+		},
+		{
+			"Marge":{
+				"age":42,
+				"job":"Housewife",
+				"hair":"blue and tall"
+				}
+		},
+		{
+			"Lisa":{
+				"age":8,
+				"job":"Student",
+				"hair":"star"
+				}			
+		},
+		{
+			"Bart":{
+				"age":10,
+				"job":"Student",
+				"hair":"spiky"
+				}			
+		},
+		{
+			"Maggie":{
+				"age":1,
+				"job":"Assassin",
+				"hair":"Star"
+				}			
+		}
+	]
+}
