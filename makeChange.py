@@ -8,8 +8,12 @@
 import sys, timeit
 
 # Global Variables
-coins = sys.argv[1]                             # declare denominations of coins
-cents = sys.argv[2:len(sys.argv) + 1]           # specify change for cents
+cents = int(sys.argv[1])                                # read cents from argv
+startSlice = 2
+endSlice = len(sys.argv) + 1
+
+coins = sys.argv[startSlice:endSlice]                   # read coins from argv
+coins = list(map(int, coins))                           # convert list of strings to ints
 count = 0
 
 def num_coins(amount, coins, count):
@@ -54,12 +58,21 @@ startDP = timeit.default_timer()
 coinsDP = minCoinsDP(coins, cents)    # call DP function
 stopDP = timeit.default_timer()
 runTimeDP = stopDP - startDP
-runTimeDP = str(round(runTimeDP, 4))
+runTimeDP = str(round(runTimeDP, 6))
 print("Using dynamic method took " + str(coinsDP) + " coins and took " + str(runTimeDP) + " seconds.")
 
 startR = timeit.default_timer()
 coinsRecursive = num_coins(cents, coins, count) # call Recursive function
 stopR = timeit.default_timer()
 runTimeR = stopR - startR
-runTimeR = str(round(runTimeR, 4))
+runTimeR = str(round(runTimeR, 6))
 print("Using recursive method took " + str(coinsRecursive) + " coins and took " + str(runTimeR) + " seconds.")
+
+'''
+Typical script output:
+
+MacBook-Pro:CS519 paulrefalo$ python makeChange.py 35 1 3 5 7 11
+Using dynamic method took 5 coins and took 0.000172 seconds.
+Using recursive method took 5 coins and took 6.097368 seconds.
+
+'''
